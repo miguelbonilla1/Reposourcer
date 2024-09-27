@@ -40,7 +40,7 @@ const App = () => {
         },
       });
 
-      const repoStars = repoResponse.data.stargazers_count; // Obtener la cantidad de estrellas del repositorio
+      const repoStars = repoResponse.data.stargazers_count;
 
       const response = await axios.get(
         `https://api.github.com/repos/${repoName}/contributors`,
@@ -58,7 +58,7 @@ const App = () => {
               Authorization: `token ${apiKey}`,
             },
           });
-          return { ...contributor, ...userDetails.data, repoStars }; // Añadir las estrellas del repositorio
+          return { ...contributor, ...userDetails.data, repoStars };
         })
       );
 
