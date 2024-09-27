@@ -80,7 +80,7 @@ const App = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-2">Reposourcer</h1>
-      <p className="text-gray-500 mb-4">by Big Bang Talent</p>
+
 
       <div className="mb-4">
         <input
