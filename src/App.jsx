@@ -33,6 +33,15 @@ const App = () => {
         return;
       }
 
+      // Obtener los detalles del repositorio para la cantidad de estrellas
+      const repoResponse = await axios.get(`https://api.github.com/repos/${repoName}`, {
+        headers: {
+          Authorization: `token ${apiKey}`,
+        },
+      });
+
+      const repoStars = repoResponse.data.stargazers_count; // Obtener la cantidad de estrellas del repositorio
+
       const response = await axios.get(
         `https://api.github.com/repos/${repoName}/contributors`,
         {
@@ -49,7 +58,7 @@ const App = () => {
               Authorization: `token ${apiKey}`,
             },
           });
-          return { ...contributor, ...userDetails.data };
+          return { ...contributor, ...userDetails.data, repoStars }; // Añadir las estrellas del repositorio
         })
       );
 
@@ -80,7 +89,6 @@ const App = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-2">Reposourcer</h1>
-
 
       <div className="mb-4">
         <input
@@ -147,7 +155,7 @@ const App = () => {
           Name: contributor.name || "N/A",
           Location: contributor.location || "N/A",
           Company: contributor.company || "N/A",
-          "Total Stars": contributor.public_repos || "N/A",
+          "Total Stars": contributor.repoStars || "N/A",
           Activity: contributor.contributions || "N/A",
           Twitter: contributor.twitter_username || "N/A",
           Website: contributor.blog || "N/A",
@@ -224,7 +232,7 @@ const App = () => {
                   <td className="border px-4 py-2">{contributor.company || "N/A"}</td>
                 )}
                 {displayColumn("Total Stars") && (
-                  <td className="border px-4 py-2">{contributor.public_repos || "N/A"}</td>
+                  <td className="border px-4 py-2">{contributor.repoStars || "N/A"}</td>
                 )}
                 {displayColumn("Activity") && (
                   <td className="border px-4 py-2">{contributor.contributions}</td>
