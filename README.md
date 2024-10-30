@@ -30,4 +30,4 @@ Press "Search" to find the contributors.
 
 Use the filters to display only the information you are interested in.
 
-Export the data to a CSV file by clicking "Export to CSV".
+Export the data to a CSV file by clicking "Export to CSV"..
