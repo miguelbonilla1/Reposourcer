@@ -1,8 +1,8 @@
-#Reposourcer
+# Reposourcer
 
-##Reposourcer is an application that allows you to search and export information about the contributors of a GitHub repository. Using the GitHub API, you can enter the URL of a repository and get a detailed list of its contributors, including their location, name, company, contributions, and other relevant metrics.
+## Reposourcer is an application that allows you to search and export information about the contributors of a GitHub repository. Using the GitHub API, you can enter the URL of a repository and get a detailed list of its contributors, including their location, name, company, contributions, and other relevant metrics.
 
-###Features
+### Features
 
 Contributor search: Enter the URL of a GitHub repository to get information about its contributors.
 
@@ -20,7 +20,7 @@ Axios: To make HTTP requests to the GitHub API.
 
 Tailwind CSS: To efficiently style the application and create an attractive, responsive design.
 
-Usage
+### Usage
 
 Enter your GitHub API key to authorize requests.
 
