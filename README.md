@@ -1,6 +1,6 @@
 # Reposourcer
 
-### Reposourcer is an application that allows you to search and export information about the contributors of a GitHub repository. Using the GitHub API, you can enter the URL of a repository and get a detailed list of its contributors, including their location, name, company, contributions, and other relevant metrics.
+ Reposourcer is an application that allows you to search and export information about the contributors of a GitHub repository. Using the GitHub API, you can enter the URL of a repository and get a detailed list of its contributors, including their location, name, company, contributions, and other relevant metrics.
 
 ### Features
 
